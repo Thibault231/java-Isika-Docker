@@ -10,8 +10,11 @@
 </head>
 
 <body>
-    <h1> Veuillez entrer votre nom s'il vous plaît </h1>
-    <h3> car nous avons souffert pour créer ce formulaire.</h3>
+    <section class="wrapper">
+        <div class="top">Veuillez entrer votre nom s'il vous plaît</div>
+        <div class="bottom" aria-hidden="true">Veuillez entrer votre nom s'il vous plaît</div>
+    </section>
+    <h3 id="h3"> car nous avons souffert pour créer ce formulaire.</h3>
 
     <form onsubmit="printUser()">
         <div>
@@ -19,7 +22,7 @@
             <input id="inputName" type="text" />
         </div>
         <div>
-            <button class="btn-donate" type="submit">Envoyer</button>
+            <button id="buttonSubmit" class="btn-donate" type="submit">Envoyer</button>
             <button class="btn-donate" type="reset">Effacer</button>
         </div>
     </form>

@@ -31,3 +31,9 @@ async function fetchResponse(name) {
         console.log('Fetch Error :' + err);
     });
 }
+
+const buttonClick = document.getElementById("buttonSubmit");
+// document.getElementById("h3").style.rotate = 180;
+buttonClick.addEventListener('click', () => {
+    console.log("ok");
+});
