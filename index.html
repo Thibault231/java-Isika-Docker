@@ -13,14 +13,15 @@
     <h1> Veuillez entrer votre nom s'il vous plaît </h1>
     <h3> car nous avons souffert pour créer ce formulaire.</h3>
 
-    <form action="#">
+    <form onsubmit="printUser()">
         <div>
             <label for="inputName">Nom : </label>
             <input id="inputName" type="text" />
         </div>
-
-        <button class="btn-donate"  onclick="printUser()">Envoyer</button>
-
+        <div>
+            <button class="btn-donate" type="submit">Envoyer</button>
+            <button class="btn-donate" type="reset">Effacer</button>
+        </div>
     </form>
 
     <div id="response"></div>

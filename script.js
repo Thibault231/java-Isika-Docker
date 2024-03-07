@@ -1,15 +1,19 @@
+/**
+ * Say hello to the user who enter its name in the form.
+ */
 function printUser() {
-    let name = document.getElementById("inputName").value;
+    const name = document.getElementById("inputName").value;
     if (!name) {
-        document.getElementById("response").innerText = "Aucu nom n'a été saisi";
+        document.getElementById("response").innerText = "Aucun nom n'a été saisi";
     } else {
         fetchResponse(name);
     }
 }
 
 /**
+ * Fetch the TD api to get the response to print.
  * 
- * @param {*} name 
+ * @param {string} name 
  */
 async function fetchResponse(name) {
     await fetch('http://localhost:8080/printUser/' + name).then((response) => {
