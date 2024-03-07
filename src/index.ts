@@ -1,8 +1,10 @@
 import express from "express";
 import { userRouter } from "./routes/user.router";
+const port = 8080; // default port to listen
 
 const app = express();
-const port = 8080; // default port to listen
+
+app.use('/', express.static(__dirname + "/"));
 
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
