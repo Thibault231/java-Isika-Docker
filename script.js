@@ -1,17 +1,19 @@
-console.log("hello");
-
-function printUser() {
-    fetch('http://localhost:8080/printUser/yoann').then((response) => {
+async function printUser() {
+    let name = document.getElementById("inputName").value;
+    console.log(name);
+    
+    await fetch('http://localhost:8080/printUser/' + name).then((response) => {
         if (response.status !== 200) {
-            return 'Problem. Status Code: ' + response.status;
+            console.log('Problem. Status Code: ' + response.status);
         } else {
             response.json().then((data) => {
-                document.getElementById("response").innerHTML(data);
+                console.log(data.response);
+                document.getElementById("response").innerText = data.response;
             }).catch((err) => {
-                return 'Fetch Error : ' + err;
+                console.log('Data treatment Error : ' + err);
             });
         }
     }).catch((err) => {
-        return 'Fetch Error :-S ' + err;
+        console.log('Fetch Error :' + err);
     });
 }
