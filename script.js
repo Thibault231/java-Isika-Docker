@@ -1,14 +1,24 @@
-async function printUser() {
+function printUser() {
     let name = document.getElementById("inputName").value;
-    console.log(name);
-    
+    if (!name) {
+        document.getElementById("response").innerText = "Aucu nom n'a été saisi";
+    } else {
+        fetchResponse(name);
+    }
+}
+
+/**
+ * 
+ * @param {*} name 
+ */
+async function fetchResponse(name) {
     await fetch('http://localhost:8080/printUser/' + name).then((response) => {
         if (response.status !== 200) {
             console.log('Problem. Status Code: ' + response.status);
         } else {
             response.json().then((data) => {
-                console.log(data.response);
-                document.getElementById("response").innerText = data.response;
+                console.log(data);
+                document.getElementById("response").innerText = data.responseToPrint;
             }).catch((err) => {
                 console.log('Data treatment Error : ' + err);
             });

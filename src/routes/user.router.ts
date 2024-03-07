@@ -9,7 +9,7 @@ userRouter.use(express.json());
 userRouter.get("/printUser/:name", async (req: Request, res: Response) => {
     const userName: string = req?.params?.name;
     let response: string = `Bonjour ${userName} vous êtes bien matinal.`;
-    res.send({response});
+    res.send({"responseToPrint" : response});
 });
 
 export { userRouter };

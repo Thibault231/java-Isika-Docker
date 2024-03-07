@@ -6,20 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isika-Docker-tp-Node</title>
     <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
     <h1> Veuillez entrer votre nom s'il vous plaît </h1>
+    <h3> car nous avons souffert pour créer ce formulaire.</h3>
 
     <form action="#">
-        <label for="inputName">Nom : </label>
-        <input id="inputName" type="text"/>
-        <br/>
-        <button onclick="printUser()">Envoyer</button>
+        <div>
+            <label for="inputName">Nom : </label>
+            <input id="inputName" type="text" />
+        </div>
+
+        <button class="btn-donate"  onclick="printUser()">Envoyer</button>
+
     </form>
 
     <div id="response"></div>
-
 
 </body>
 
