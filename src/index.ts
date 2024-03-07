@@ -1,7 +1,6 @@
 import express from "express";
-import { userRouter } from "./routes/user.router";
-const port = 8080; // default port to listen
-
+import { userRouter } from "./user.router";
+const port = 8080;
 const app = express();
 
 app.use('/', express.static(__dirname + "/"));

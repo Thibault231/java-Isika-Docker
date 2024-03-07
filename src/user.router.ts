@@ -5,12 +5,9 @@ const userRouter = express.Router();
 userRouter.use(express.json());
 
 // ------------------------------GET
-//Afficher le message du nom : http://localhost:8080/printUser/yoann
 userRouter.get("/", async (req: Request, res: Response) => {
-    res.redirect("/index.html");
+    res.redirect("/app.html");
 });
-
-
 
 // ------------------------------GET
 //Afficher le message du nom : http://localhost:8080/printUser/yoann

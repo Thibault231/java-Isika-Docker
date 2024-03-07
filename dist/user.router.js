@@ -18,9 +18,8 @@ const userRouter = express_1.default.Router();
 exports.userRouter = userRouter;
 userRouter.use(express_1.default.json());
 // ------------------------------GET
-//Afficher le message du nom : http://localhost:8080/printUser/yoann
 userRouter.get("/", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    res.redirect("index.html");
+    res.redirect("/app.html");
 }));
 // ------------------------------GET
 //Afficher le message du nom : http://localhost:8080/printUser/yoann

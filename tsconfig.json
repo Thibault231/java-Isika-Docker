@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-      "module": "commonjs",
+      "module": "CommonJS",
       "esModuleInterop": true,
       "target": "es6",
       "noImplicitAny": true,
@@ -8,10 +8,9 @@
       "sourceMap": true,
       "outDir": "dist",
       "baseUrl": ".",
-      "allowJs": true,
       "paths": {
           "*": ["node_modules/*"]
       }
   },
-  "include": ["src/**/*", "dist/src/script.js"]
+  "include": ["src/**/*"]
 }
