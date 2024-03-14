@@ -12,5 +12,10 @@ RUN npm install
 RUN npm install -g  typescript
 RUN tsc
 
+COPY style.css dist/
+COPY Nunito-Regular.ttf dist/
+COPY app.js dist/
+COPY app.html dist/
+
 
 CMD ["npm", "start"]
