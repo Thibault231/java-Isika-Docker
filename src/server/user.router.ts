@@ -6,7 +6,7 @@ userRouter.use(express.json());
 
 // ------------------------------GET
 userRouter.get("/", async (req: Request, res: Response) => {
-    res.redirect("/app.html");
+    res.redirect("../client/app.html");
 });
 
 // ------------------------------GET

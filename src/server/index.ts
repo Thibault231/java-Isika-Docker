@@ -1,9 +1,10 @@
 import express from "express";
 import { userRouter } from "./user.router";
+import path from 'path'
 const port = 8080;
 const app = express();
 
-app.use('/', express.static(__dirname + "/"));
+app.use(express.static(path.join(__dirname, '../')));
 
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");

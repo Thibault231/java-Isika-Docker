@@ -1,5 +1,5 @@
 function printUser() {
-    const name = document.getElementById("inputName").value;
+    const name = (<HTMLInputElement>document.getElementById("inputName")).value;
     if (!name) {
         document.getElementById("response").innerText = "Aucun nom n'a été saisi";
     } else {
@@ -7,7 +7,7 @@ function printUser() {
     }
 };
 
-async function fetchResponse(name) {
+async function fetchResponse(name: string) {
     await fetch('http://localhost:8080/printUser/' + name
     ).then((response) => {
         if (response.status !== 200) {
