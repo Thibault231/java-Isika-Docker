@@ -9,6 +9,7 @@ dist/
 # Ignore les fichiers générés par l'éditeur WebStorm
 .idea/
 
+
 # Ignore les fichiers de dépendances installées via npm ou yarn
 node_modules/
 
